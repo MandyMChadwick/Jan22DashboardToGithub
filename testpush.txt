@@ -1,1 +1,5 @@
-test
+=IIf(IsNothing(Parameters!StartDate.Value) And IsNothing(Parameters!EndDate.Value), 
+     "", 
+     "Date From: " & IIf(IsNothing(Parameters!StartDate.Value), "N/A", Format(Parameters!StartDate.Value, "d")) & 
+     " Date To: " & IIf(IsNothing(Parameters!EndDate.Value), "N/A", Format(Parameters!EndDate.Value, "d"))
+    )
